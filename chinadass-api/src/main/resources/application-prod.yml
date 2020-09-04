@@ -1,0 +1,22 @@
+#用于配置生产坏境信息
+#配置服务端口号
+server:
+  port: 8083
+  servlet:
+    context-path: /api
+    session:
+      timeout: 1800s
+# 配置数据库信息
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.1.28:3306/jinshajiuye?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: rfidtc
+    driver-class-name: com.mysql.jdbc.Driver
+#Mybatis的mapper.xml文件位置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#配置日志输出位置
+logging:
+  file:
+    path: /home/newsystem/tomcat/apache-tomcat-7.0.82/jslogs/

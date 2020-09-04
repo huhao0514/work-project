@@ -1,0 +1,15 @@
+spring:
+  profiles:
+#  环境分支:dev本地分支|test测试分支|prod生产分支
+    active: dev
+
+# 配置pagehelper参数
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+
+

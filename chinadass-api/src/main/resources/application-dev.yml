@@ -1,0 +1,32 @@
+#用于配置开发坏境信息
+#配置服务端口号
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    session:
+      timeout: 1800s
+# 配置数据库信息
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/huhao?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+#Mybatis的mapper.xml文件位置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#配置日志输出位置
+logging:
+  file:
+    path: C:\log
+
+#电子营业执照
+electronic:
+  business:
+    license:
+      uid: NHA4F9LB
+      key: Ghge0GHK0I4OvhdEuUrQoYj6tyD8Js95fYSI0C6sKMVvQBxtQaLLxT873GFkT2FI
+      appid: 467c40873844b24f
+      redirect: https://zzapp.gsxt.gov.cn/ebl?ebl=main&parm=
+      url: https://utapi.shangzhao360.com/license
